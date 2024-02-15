@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ASTRO_CLIENT</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      src="https://kit.fontawesome.com/eb0f18ef77.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oregano&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hero" id="vanta-canvas">
+      <header class="header">
+        <a href="#" class="logo">AstroGem</a>
+        <nav class="navbar">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+          <a href="#">Horoscope</a>
+        </nav>
+      </header>
+      <section>
+        <div class="container">
+          <div id="slide">
+            <div class="item" style="background-image: url(img1.jpg)">
+              <div class="content">
+                <div class="name">Daily Horoscope</div>
+                <div class="des">
+                  We are ready to tell what stars have prepared for you or your
+                  family.
+                </div>
+                <button>Read More</button>
+              </div>
+            </div>
+            <div class="item" style="background-image: url(img2.jpg)">
+              <div class="content">
+                <div class="name">Personal Horoscope</div>
+                <div class="des">
+                  Our team has prepared a special prediction for every visitor
+                  of our website.
+                </div>
+                <button>Read More</button>
+              </div>
+            </div>
+            <div class="item" style="background-image: url(img3.jpg)">
+              <div class="content">
+                <div class="name">Beauty Horoscope</div>
+                <div class="des">
+                  Begin your day with our free astrological tips on your beauty
+                  image.
+                </div>
+                <button>Read More</button>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="content">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="container_1">
+          <div class="contactInfo">
+            <div class="box">
+              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="text">
+                <h3>Address</h3>
+                <p>
+                  4761 Sugar Camp Road , <br />Owatonna,Minnesota,<br />55060
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="text">
+                <h3>Phone</h3>
+                <p>+91-9476383024</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+              <div class="text">
+                <h3>Email</h3>
+                <p>udayjordan1@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="contactForm">
+            <form action="">
+              <h2>Send Details</h2>
+              <div class="inputBox">
+                <input type="text" name="" required />
+                <span>Full Name</span>
+              </div>
+              <div class="inputBox">
+                <select id="gender" name="gender" required>
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="inputBox">
+                <input type="date" id="dob" name="dob" required />
+                <span>Date of Birth</span>
+              </div>
+              <div class="inputBox">
+                <input
+                  type="time"
+                  id="timeofbirth"
+                  name="timeofbirth"
+                  required
+                  placeholder=" "
+                />
+                <span>Time of Birth</span>
+              </div>
+              <div class="inputBox">
+                <input type="text" id="birthplace" name="birthplace" required />
+                <span>Birth Place</span>
+              </div>
+              <div class="inputBox">
+                <input type="email" name="" required />
+                <span>Email</span>
+              </div>
+              <div class="inputBox">
+                <textarea id="message" name="Message" rows="4"></textarea>
+                <span>Type your Message</span>
+              </div>
+              <div class="inputBox_1">
+                <input class="submission" type="submit" name="" value="Send" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- three js embed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#vanta-canvas",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x5e0b5e,
+        backgroundColor: 0x121631,
+        points: 20.0,
+        maxDistance: 17.0,
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

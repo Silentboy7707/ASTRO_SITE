@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Oregano&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  /* min-height: 100vh; */
+  min-width: 100vw;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  /* left: 50%;
+  top: 59%; */
+  /* transform: translate(-50%, -50%); */
+  width: 1300px;
+  height: 600px;
+  padding: 50px;
+  margin-top: 120px;
+  margin-left: 100px;
+  background-color: rgb(27, 18, 52);
+  box-shadow: 0 30px 50px rgb(27, 18, 52);
+}
+#slide {
+  width: max-content;
+  margin-top: 50px;
+  border-radius: 100px;
+}
+.item {
+  width: 200px;
+  height: 300px;
+  background-position: 50% 50%;
+  display: inline-block;
+  transition: 0.5s;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #505050;
+}
+.item:nth-child(1) {
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+}
+.item:nth-child(2) {
+  left: 90%;
+}
+.item:nth-child(3) {
+  left: calc(90% + 240px);
+  opacity: 0;
+}
+.item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  padding: 0;
+  color: #eee;
+  transform: translate(0, -50%);
+  display: none;
+  font-family: "Oregano", cursive;
+}
+.item:nth-child(1) .content {
+  display: block;
+  z-index: 11111;
+}
+.item .name {
+  font-size: 80px;
+  font-weight: 400;
+  opacity: 0;
+  animation: showcontent 1s ease-in-out 1 forwards;
+  /* Adjusts the line height to slightly reduce spacing */
+}
+.item .des {
+  font-size: 20px;
+  margin: 20px 0;
+  opacity: 0;
+  animation: showcontent 1s ease-in-out 0.4s 1 forwards;
+}
+.item button {
+  font-family: "Oregano", cursive;
+  font-size: 20px;
+  padding: 25px 40px;
+  border-radius: 14px;
+  background-color: transparent;
+  color: white;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+  opacity: 0;
+  animation: showcontent 1s ease-in-out 0.8s 1 forwards;
+}
+
+.item button:hover {
+  background-color: rgb(241, 236, 229);
+  font-weight: bold;
+  color: black;
+}
+@keyframes showcontent {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter: blur(0);
+  }
+}
+
+.buttons {
+  position: absolute;
+  bottom: 30px;
+  z-index: 222222;
+  text-align: center;
+  width: 100%;
+  color: #eee;
+}
+.buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #080913;
+  background-color: rgb(17, 30, 54);
+  transition: 0.5s;
+}
+.buttons button:hover {
+  background-color: rgb(227, 240, 240);
+  color: #141010;
+}
+#vanta-canvas {
+  width: 100vw;
+  /* height: 100%; */
+}
+.hero {
+  display: flex;
+  width: 100%;
+  /* height: 100vh; */
+  /* min-height: 100vh; */
+  /* background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+  /* background: #111; */
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Oregano", Georgia, "Times New Roman", Times, serif;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  margin-bottom: 50px;
+}
+.logo {
+  font-family: "oregano";
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+.navbar a {
+  position: relative;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 25px;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+.navbar a:hover::before {
+  width: 100%;
+}
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+}
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+.contact .content p {
+  font-weight: 300;
+  color: #fff;
+}
+.container_1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.container_1 .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.container_1 .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.container_1 .contactInfo .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #fff;
+}
+.container_1 .contactInfo .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+.container_1 .contactInfo .box .text h3 {
+  font-weight: 700;
+  font-size: 30px;
+  color: #1ec7e9;
+}
+.contactForm {
+  width: 40%;
+  padding: 80px;
+  margin-top: 30px;
+  background: transparent;
+}
+
+.contactForm h2 {
+  font-size: 70px;
+  color: #eeeaea;
+  font-weight: 500;
+}
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 26px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #eeeaea;
+  outline: none;
+  resize: none;
+  color: #eeeaea;
+  background-color: transparent;
+}
+#gender {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+
+  transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 0 0;
+  font-size: 16px;
+  margin: 1px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #eeeaea;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  color: #1ec7e9;
+  font-size: 20px;
+  transform: translateY(-10px);
+}
+.submission {
+  background-color: #fff;
+  color: #1ec7e9;
+
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.submission:hover {
+  background-color: #1ec7e9;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
