@@ -1,0 +1,174 @@
+.Annual.content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+}
+
+.heading {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    color: #FFC59C;
+}
+
+.hero {
+    /* display: flex; */
+    flex-direction: column;
+    /* align-items: center; Optional: Center the content horizontally */
+    position: relative;
+    height: 100%; 
+    /* overflow: hidden; */
+}
+
+#vanta-canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 3px;
+}
+
+.card {
+    background-color: #1F1A45;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 3px;
+    overflow: hidden;
+    max-width: 500px; /* Set max-width instead of width */
+    width: 100%; /* Take full width in smaller screens */
+    display: flex;
+}
+
+.card-image {
+    width: 25%;
+    height: 40%;
+    border-radius: 50%;
+    margin-top: 15%;
+    object-fit: cover;
+}
+
+.card-content {
+    width: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.card-title {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #FFC59C;
+}
+
+.card-text {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+
+.read-more {
+    background-color: #FFC59C;
+    color: #3a2258;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+.Rashi {
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+/* Prevent horizontal scrolling */
+html{
+    scroll-behavior: smooth;
+} 
+
+body {
+    min-width: 100vw;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+
+.contact-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    color: #FFC59C;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    background-color: #1F1A45;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #FFC59C; /* WhatsApp green color */
+    color: #3a2258;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button.call {
+    background-color:#FFC59C; /* Call blue color */
+}
+
+.contact-button:hover {
+    background-color: rgb(255, 255, 255); /* Darker WhatsApp green on hover */
+}
+
+.contact-button.call:hover {
+    background-color: rgb(255, 255, 255); /* Darker Call blue on hover */
+}
+
+/* Responsive font size */
+@media screen and (max-width: 800px) {
+    .Annual.content {
+        font-size: 14px;
+    }
+}
